@@ -44,7 +44,7 @@ implementation
 procedure TControllerAuthentication.Login(AEmail, APassword: string);
 begin
 
-   HTTPRequest:=POST.Route(SERVER_AUTH_LOGIN)
+   HTTPRequest:=POST.Route('/auth/login')
     .Parameter('email', AEmail)
     .Parameter('password', APassword)
     .OnBefore(
